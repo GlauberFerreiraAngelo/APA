@@ -33,6 +33,7 @@ for n_lin in range(numero_de_habitantes):
     linha2 = [] # cria uma linha para a matriz
     teste2 =  arquivo.readline().split(" ")
     for n_col in range(len(teste2)):
+        #ta dando erro aqui por causa que ta passando espaços 
         if teste2[n_col] == " ":
             linha2.append(teste2[n_col])
             

@@ -33,9 +33,8 @@ for n_lin in range(numero_de_habitantes):
     linha2 = [] # cria uma linha para a matriz
     teste2 =  arquivo.readline().split(" ")
     for n_col in range(len(teste2)):
-        #ta dando erro aqui por causa que ta passando espaços 
-        if teste2[n_col] == " ":
-            linha2.append(teste2[n_col])
+        if teste2[n_col] > " ":
+            linha2.append(int(teste2[n_col]))
             
     matrizHxP.append(linha2)
 print(matrizHxP)
@@ -47,17 +46,3 @@ print('numero de habitantes: ', numero_de_habitantes )
 print('numero de postos escolhidos: ', numero_de_postos_escolhidos )
 
 arquivo.close()
-'''
-matriz = []
-for n_lin in range(numero_de_postos):
-    linha = [] # cria uma linha para a matriz
-    for n_col in range(2):
-        if n_lin == n_col:
-            linha.append(1)
-        else:
-            linha.append(2)
-    matriz.append(linha)
-print(matriz)
-
-print(matriz[1][1])
-'''
